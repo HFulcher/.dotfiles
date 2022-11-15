@@ -2,6 +2,7 @@
 
 # Set .bashrc
 cat ./.bashrc >> $HOME/.bashrc
+touch $HOME/.bashprofile
 
 # Install required packages
 sudo apt update && sudo apt upgrade -y
@@ -20,6 +21,7 @@ sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
 # Install Node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 nvm install node
+source $HOME/.nvm/nvm.sh
 
 # Install Java
 sudo apt install -y openjdk-11-jre openjdk-11-jdk
