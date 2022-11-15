@@ -50,4 +50,5 @@ mv ./nvim/ $HOME/.config/nvim/
 # Install external Neovim dependencies
 sudo apt install -y ripgrep fd-find
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+npm install -g tree-sitter tree-sitter-cli typescript typescript-language-server
 
