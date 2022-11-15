@@ -8,7 +8,7 @@ touch $HOME/.bash_profile
 
 # Install required packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y docker docker-compose vim 
+sudo apt install -y docker docker-compose vim fuse libfuse2
 
 # Install Python 
 sudo apt install software-properties-common -y
@@ -26,7 +26,7 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-nvm install node
+nvm install 18
 
 # Install Java
 sudo apt install -y openjdk-11-jre openjdk-11-jdk
