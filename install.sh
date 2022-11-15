@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -euox pipefail
+
 # Set .bashrc
 cat ./.bashrc >> $HOME/.bashrc
 touch $HOME/.bashprofile
@@ -16,12 +18,14 @@ sudo apt install -y python3.10 python3-pip
 
 # Install Go
 curl -OL https://golang.org/go1.19.3-linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf go1.19.3.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go && tar -C /usr/local -xzf ./go1.19.3.linux-amd64.tar.gz
 
 # Install Node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 nvm install node
-source $HOME/.nvm/nvm.sh
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 # Install Java
 sudo apt install -y openjdk-11-jre openjdk-11-jdk
