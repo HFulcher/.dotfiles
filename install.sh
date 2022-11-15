@@ -18,7 +18,8 @@ sudo apt install -y python3.10 python3-pip
 
 # Install Go
 curl -OL https://go.dev/dl/go1.19.3.linux-amd64.tar.gz
-sudo rm -rf /usr/local/go && tar -C /usr/local -xzf ./go1.19.3.linux-amd64.tar.gz
+sudo rm -rf /usr/local/go 
+sudo tar -C /usr/local -xzf ./go1.19.3.linux-amd64.tar.gz
 
 # Install Node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
