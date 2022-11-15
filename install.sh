@@ -4,7 +4,7 @@ set -euox pipefail
 
 # Set .bashrc
 cat ./.bashrc >> $HOME/.bashrc
-touch $HOME/.bashprofile
+touch $HOME/.bash_profile
 
 # Install required packages
 sudo apt update && sudo apt upgrade -y
