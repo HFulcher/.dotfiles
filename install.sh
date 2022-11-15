@@ -8,7 +8,7 @@ touch $HOME/.bash_profile
 
 # Install required packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y docker docker-compose vim fuse libfuse2
+sudo apt install -y vim git curl docker docker-compose vim fuse libfuse2
 
 # Install Python 
 sudo apt install software-properties-common -y
