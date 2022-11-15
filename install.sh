@@ -23,10 +23,10 @@ sudo tar -C /usr/local -xzf ./go1.19.3.linux-amd64.tar.gz
 
 # Install Node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
-nvm install node
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+nvm install node
 
 # Install Java
 sudo apt install -y openjdk-11-jre openjdk-11-jdk
