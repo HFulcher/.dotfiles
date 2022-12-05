@@ -6,9 +6,12 @@ set -euox pipefail
 cat ./.bashrc >> $HOME/.bashrc
 touch $HOME/.bash_profile
 
+# Set .tmux.conf
+cat ./.tmux.conf >> $HOME/.tmux.conf
+
 # Install required packages
 sudo apt update && sudo apt upgrade -y
-sudo apt install -y vim git curl docker docker-compose vim fuse libfuse2
+sudo apt install -y vim tmux git curl docker docker-compose vim fuse libfuse2
 
 # Install Python 
 sudo apt install software-properties-common -y

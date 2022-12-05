@@ -2,7 +2,7 @@ vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
-    use 'folke/tokyonight.nvim'
+    use 'Mofiqul/dracula.nvim'
     use 'nvim-lua/plenary.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make'}
     use 'nvim-tree/nvim-web-devicons'
@@ -25,4 +25,5 @@ return require('packer').startup(function(use)
         }
     }
     use { 'folke/which-key.nvim', config = function() require("which-key").setup {} end }
+    use 'christoomey/vim-tmux-navigator'
 end)
