@@ -8,7 +8,7 @@ return require('packer').startup(function(use)
     use 'nvim-tree/nvim-web-devicons'
     use {'nvim-telescope/telescope.nvim', tag ='0.1.0', requires = { {'nvim-lua/plenary.nvim'} } }
     use {'nvim-treesitter/nvim-treesitter'}
-    use 'TimUntersberger/neogit'
+    use {'NeogitOrg/neogit', requires = 'nvim-lua/plenary.nvim' }
     use 'ThePrimeagen/harpoon'
     use { 'VonHeikemen/lsp-zero.nvim', requires = {
             {'neovim/nvim-lspconfig'},
