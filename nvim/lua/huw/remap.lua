@@ -21,3 +21,6 @@ nnoremap("<C-Up>", "<cmd>resize -2<CR>")
 nnoremap("<C-Down>", "<cmd>resize +2<CR>")
 nnoremap("<C-Left>", "<cmd>vertical resize -2<CR>")
 nnoremap("<C-Right>", "<cmd>vertical resize +2<CR>")
+
+nnoremap("<C-d>", "<C-d>zz")
+nnoremap("<C-u>", "<C-u>zz")
