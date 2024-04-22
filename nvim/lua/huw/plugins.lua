@@ -15,6 +15,7 @@ require("lazy").setup({
   {'L3MON4D3/LuaSnip'},
   { "alexghergh/nvim-tmux-navigation" },
   { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
+  { 'nvim-tree/nvim-web-devicons' },
   { "folke/which-key.nvim", event = "VeryLazy",
   init = function()
     vim.o.timeout = true
@@ -25,5 +26,5 @@ require("lazy").setup({
     -- or leave it empty to use the default settings
     -- refer to the configuration section below
   }
-}
+},
 })
