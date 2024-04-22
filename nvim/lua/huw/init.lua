@@ -1,0 +1,5 @@
+require("huw.settings")
+require("huw.remap")
+require("huw.lazy")
+require("huw.plugins")
+vim.cmd("colorscheme rose-pine")
