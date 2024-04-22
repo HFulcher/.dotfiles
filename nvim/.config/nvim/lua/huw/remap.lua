@@ -1,26 +1,35 @@
-local nnoremap = require("huw.keymap").nnoremap
+vim.keymap.set("n", "<leader>fe", vim.cmd.Ex)
 
-nnoremap("<leader>fe", "<cmd>Ex<CR>")
-nnoremap("<leader>ff", "<cmd>Telescope find_files<CR>")
-nnoremap("<leader>fg", "<cmd>Telescope live_grep<CR>")
-nnoremap("<leader>fb", "<cmd>Telescope buffers<CR>")
+-- Move selected block up and down
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv")
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 
-nnoremap("<leader>hm", "<cmd>lua require('harpoon.mark').add_file()<CR>")
-nnoremap("<leader>hh", "<cmd>lua require('harpoon.ui').toggle_quick_menu()<CR>")
+-- Takes line below and appends it to current line with space
+vim.keymap.set("n", "J", "mzJ`z")
 
-nnoremap("<leader>tr", "<cmd>tabn<CR>")
-nnoremap("<leader>tl", "<cmd>tabp<CR>")
+-- Page up and down keep cursor in middle
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
-nnoremap("<leader>sh", "<cmd>split<CR>")
-nnoremap("<leader>sv", "<cmd>vsplit<CR>")
-nnoremap("<C-j>", "<C-w>j")
-nnoremap("<C-k>", "<C-w>k")
-nnoremap("<C-h>", "<C-w>h")
-nnoremap("<C-l>", "<C-w>l")
-nnoremap("<C-Up>", "<cmd>resize -2<CR>")
-nnoremap("<C-Down>", "<cmd>resize +2<CR>")
-nnoremap("<C-Left>", "<cmd>vertical resize -2<CR>")
-nnoremap("<C-Right>", "<cmd>vertical resize +2<CR>")
+-- Move through search results keeping cursor in middle
+vim.keymap.set("n", "n", "nzzzv")
+vim.keymap.set("n", "N", "Nzzzv")
 
-nnoremap("<C-d>", "<C-d>zz")
-nnoremap("<C-u>", "<C-u>zz")
+-- greatest remap ever
+vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- next greatest remap ever : asbjornHaland
+vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
+vim.keymap.set("n", "<leader>Y", [["+Y]])
+
+vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
+
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
+
+vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
+vim.keymap.set("n", "<C-j>", "<cmd>cprev<CR>zz")
+vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
+vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
+
+vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
