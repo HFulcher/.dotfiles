@@ -41,6 +41,9 @@ map("n", "[l", "<cmd>lprev<CR>zz")
 map("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
 
--- Better indenting 
+-- Better indenting
 map("v", "<", "<gv")
 map("v", ">", ">gv")
+
+-- Show diagnostics in floating window
+map('n', 'gl', vim.diagnostic.open_float, { desc = 'Line diagnostics' })
