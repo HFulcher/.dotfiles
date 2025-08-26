@@ -32,3 +32,4 @@ vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
 
+vim.api.nvim_set_option("clipboard", "unnamed")
